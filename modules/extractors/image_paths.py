@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def extract_image_paths(driver, container):
+def extract_image_paths(container):
     element_xpath = """
     //div[@class='slick-track']
     //img[@class='br-main-img']

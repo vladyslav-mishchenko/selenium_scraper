@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def extract_product_code(driver, container):
+def extract_product_code(container):
     element_xpath = """
     //div[@id='br-pr-1']
     //*[contains(@class, 'br-pr-code-val')]

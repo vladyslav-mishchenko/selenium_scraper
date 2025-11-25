@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def extract_characteristics(driver, container):
+def extract_characteristics(container):
     characteristics = {}
 
     if container is None:

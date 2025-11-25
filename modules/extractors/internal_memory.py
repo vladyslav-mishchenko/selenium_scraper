@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def extract_internal_memory(driver, container):
+def extract_internal_memory(container):
     element_xpath = """
     //div[@class='br-pr-chr-item'][.//h3[text()="Функції пам'яті"]]
     //div/div[span[1][text()="Вбудована пам'ять"]]/span[2]

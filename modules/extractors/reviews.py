@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def extract_reviews(driver, container):
+def extract_reviews(container):
     element_xpath = """
     //*[@id='br-pr-1']
     //*[contains(@class, 'main-comments-block')]

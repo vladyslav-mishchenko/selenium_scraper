@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def extract_color(driver, container):
+def extract_color(container):
     element_xpath = """
     //div[@class='br-pr-chr-item'][.//h3[text()='Фізичні характеристики']]
     //div/div[span[1][text()='Колір']]/span[2]

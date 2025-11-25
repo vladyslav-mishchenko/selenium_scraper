@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def extract_screen_diagonal(driver, container):
+def extract_screen_diagonal(container):
     element_xpath = """
     //div[@class='br-pr-chr-item'][.//h3[text()='Дисплей']]
     //div/div[span[1][text()='Діагональ екрану']]/span[2]

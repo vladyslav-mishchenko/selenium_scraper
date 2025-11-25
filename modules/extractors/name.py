@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def extract_name(driver, container):
+def extract_name(container):
     element_xpath = """
     //*[contains(@class, 'main-right-block')]
     //*[contains(@class, 'desktop-only-title')]

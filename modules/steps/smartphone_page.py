@@ -63,18 +63,16 @@ def parsing_data(driver):
         print("Characteristics not open")
         characteristics_container = None
 
-    data["name"] = extract_name(driver, product_container)
-    data["price"] = extract_price(driver, product_container)
-    data["discounted_price"] = extract_discounted_price(driver, product_container)
-    data["reviews"] = extract_reviews(driver, product_container)
-    data["image_paths"] = extract_image_paths(driver, product_container)
-    data["product_code"] = extract_product_code(driver, product_container)
-    data["characteristics"] = extract_characteristics(driver, characteristics_container)
-    data["color"] = extract_color(driver, characteristics_container)
-    data["internal_memory"] = extract_internal_memory(driver, characteristics_container)
-    data["screen_diagonal"] = extract_screen_diagonal(driver, characteristics_container)
-    data["display_resolution"] = extract_display_resolution(
-        driver, characteristics_container
-    )
+    data["name"] = extract_name(product_container)
+    data["price"] = extract_price(product_container)
+    data["discounted_price"] = extract_discounted_price(product_container)
+    data["reviews"] = extract_reviews(product_container)
+    data["image_paths"] = extract_image_paths(product_container)
+    data["product_code"] = extract_product_code(product_container)
+    data["characteristics"] = extract_characteristics(characteristics_container)
+    data["color"] = extract_color(characteristics_container)
+    data["internal_memory"] = extract_internal_memory(characteristics_container)
+    data["screen_diagonal"] = extract_screen_diagonal(characteristics_container)
+    data["display_resolution"] = extract_display_resolution(characteristics_container)
 
     return data

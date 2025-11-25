@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def extract_price(driver, container):
+def extract_price(container):
     element_xpath = """
     //div[contains(@class, 'main-price-block')]
     //div[contains(@class, 'br-pr-np')]

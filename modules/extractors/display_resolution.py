@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def extract_display_resolution(driver, container):
+def extract_display_resolution(container):
     element_xpath = """
     //div[@class='br-pr-chr-item'][.//h3[text()='Дисплей']]
     //div/div[span[1][text()='Роздільна здатність екрану']]/span[2]

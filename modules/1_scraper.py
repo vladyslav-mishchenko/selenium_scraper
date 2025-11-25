@@ -19,6 +19,7 @@ open_home_page(driver, url)
 
 # step:2 - search input
 search_text = "Apple iPhone 15 128GB Black"
+# search_text = "Мобільний телефон Xiaomi Redmi Note 14 8/256GB Midnight Black"
 fill_search_input(driver, search_text)
 
 # step:3 - submit search form

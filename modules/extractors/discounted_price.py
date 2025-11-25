@@ -2,10 +2,10 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def extract_name(driver, container):
+def extract_discounted_price(driver, container):
     element_xpath = """
-    //*[contains(@class, 'main-right-block')]
-    //*[contains(@class, 'desktop-only-title')]
+    //div[contains(@class, 'main-price-block')]
+    //div[contains(@class, 'br-pr-op')]
     """
     element = element_xpath.strip()
 
@@ -17,7 +17,7 @@ def extract_name(driver, container):
         value = target.text.strip()
         return value
     except NoSuchElementException:
-        print("Product name not found")
+        print("Discounted price not found")
         return None
     except Exception as e:
         print(f"error: {e}")

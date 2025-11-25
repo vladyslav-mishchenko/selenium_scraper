@@ -2,10 +2,10 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 
-def extract_name(driver, container):
+def extract_display_resolution(driver, container):
     element_xpath = """
-    //*[contains(@class, 'main-right-block')]
-    //*[contains(@class, 'desktop-only-title')]
+    //div[@class='br-pr-chr-item'][.//h3[text()='Дисплей']]
+    //div/div[span[1][text()='Роздільна здатність екрану']]/span[2]
     """
     element = element_xpath.strip()
 
@@ -14,10 +14,9 @@ def extract_name(driver, container):
 
     try:
         target = container.find_element(By.XPATH, element)
-        value = target.text.strip()
-        return value
+        return target.text.strip()
     except NoSuchElementException:
-        print("Product name not found")
+        print("Display resolution not found")
         return None
     except Exception as e:
         print(f"error: {e}")

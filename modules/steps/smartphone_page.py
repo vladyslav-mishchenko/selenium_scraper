@@ -15,6 +15,8 @@ from extractors.reviews import extract_reviews
 from extractors.screen_diagonal import extract_screen_diagonal
 from extractors.display_resolution import extract_display_resolution
 from extractors.characteristics import extract_characteristics
+from extractors.manufacturer import extract_manufacturer
+from extractors.series import extract_series
 
 
 def parsing_data(driver):
@@ -74,5 +76,7 @@ def parsing_data(driver):
     data["internal_memory"] = extract_internal_memory(characteristics_container)
     data["screen_diagonal"] = extract_screen_diagonal(characteristics_container)
     data["display_resolution"] = extract_display_resolution(characteristics_container)
+    data["manufacturer"] = extract_manufacturer(characteristics_container)
+    data["series"] = extract_series(characteristics_container)
 
     return data

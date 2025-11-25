@@ -7,6 +7,8 @@ from steps.search_form_input import fill_search_input
 from steps.search_form_submit import click_form_submit
 from steps.search_results_page import open_search_results
 from steps.smartphone_page import parsing_data
+from steps.storage import save_to_db
+from steps.read import print_from_db
 
 url = "https://www.brain.com.ua/"
 
@@ -18,8 +20,8 @@ driver = webdriver.Chrome(service=service)
 open_home_page(driver, url)
 
 # step:2 - search input
-search_text = "Apple iPhone 15 128GB Black"
-# search_text = "Мобільний телефон Xiaomi Redmi Note 14 8/256GB Midnight Black"
+# search_text = "Apple iPhone 15 128GB Black"
+search_text = "Мобільний телефон Samsung Galaxy"
 fill_search_input(driver, search_text)
 
 # step:3 - submit search form
@@ -30,7 +32,12 @@ open_search_results(driver)
 
 # step:5 - parsing data
 data = parsing_data(driver)
-print(data)
+
+# step:6 - save to db
+save_to_db(data)
+
+# step:7 - print from db
+print_from_db()
 
 input("Press Enter to close the browser...")
 

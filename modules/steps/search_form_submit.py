@@ -22,7 +22,7 @@ def click_form_submit(driver):
     """
     element = element_xpath.strip()
 
-    wait = random.randint(10, 15)
+    wait = random.randint(20, 30)
 
     try:
         search_submit_wait = WebDriverWait(driver, wait)
